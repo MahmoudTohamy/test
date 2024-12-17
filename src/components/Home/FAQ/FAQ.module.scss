@@ -1,0 +1,24 @@
+.faq {
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-old-lace);
+  padding: 13rem 0;
+  flex-direction: column;
+  gap: 3.7rem;
+  .title {
+    font-size: 4.2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .link {
+    padding: 1rem 0;
+    background-color: var(--color-royal-blue);
+    max-width: 20rem;
+    width: 1005;
+    border-radius: 2.2rem;
+    text-align: center;
+    font-weight: 580;
+  }
+}

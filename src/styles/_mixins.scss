@@ -1,0 +1,32 @@
+/** @format */
+
+@mixin responsive-max($width-pixels) {
+  $width-em: calc($width-pixels/16);
+  @media (max-width:'#{$width-em}em') {
+    @content;
+  }
+}
+@mixin responsive-min($width-pixels) {
+  $width-em: calc($width-pixels/16);
+  @media (min-width:'#{$width-em}em') {
+    @content;
+  }
+}
+@mixin text-ellipses($noOfChars: 20, $clamps: 2) {
+  max-width: #{$noOfChars}ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: $clamps;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  word-break: break-word;
+}
+
+@mixin prefix($key, $value) {
+  -webkit-#{$key}: #{$value};
+  -moz-#{$key}: #{$value};
+  -ms-#{$key}: #{$value};
+  -o-#{$key}: #{$value};
+  #{$key}: #{$value};
+}

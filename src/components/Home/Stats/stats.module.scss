@@ -1,0 +1,107 @@
+.stats {
+  background: var(--color-old-lace);
+  padding: 20rem 0;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10rem;
+
+    .ourNumbers {
+      width: 50%;
+      @include responsive-max(1440) {
+        width: 100%;
+      }
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 3.3rem;
+
+      @include responsive-max(768) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .card {
+        min-width: 28rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 2rem;
+        @include responsive-max(768) {
+          text-align: center;
+        }
+        &:nth-child(odd) {
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0.5px;
+            height: 100%;
+            left: 80%;
+            background-color: var(--color-dar-spring-green);
+
+            @include responsive-max(768) {
+              display: none;
+            }
+          }
+        }
+
+        h3 {
+          font-size: 5.6rem;
+          font-weight: 300;
+          line-height: 6.1rem;
+        }
+        p {
+          font-size: 2.4rem;
+          letter-spacing: 0.02rem;
+        }
+      }
+    }
+
+    .data {
+      width: 38%;
+      @include responsive-max(1440) {
+        width: 100%;
+      }
+      .heading {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        h3 {
+          font-size: 1.8rem;
+          font-weight: 300;
+        }
+      }
+      .title {
+        margin: 3rem 0 2.5rem 0;
+        font-size: 4.2rem;
+        font-weight: 400;
+      }
+      .description {
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      .appOwner {
+        margin-top: 9.5rem;
+        gap: 5.5rem;
+        display: flex;
+        align-items: center;
+        .companyName {
+          position: relative;
+          font-size: 2.2rem;
+          font-weight: 600;
+          line-height: 3rem;
+          text-transform: capitalize;
+        }
+
+        .separator {
+          width: 0.6rem;
+          height: 0.6rem;
+          border-radius: 50%;
+          background-color: var(--color-dar-spring-green);
+        }
+      }
+    }
+  }
+}

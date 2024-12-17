@@ -1,0 +1,88 @@
+/** @format */
+
+.planningCont {
+  margin: auto;
+  .infoCont {
+    display: grid;
+    grid-template-columns: 2fr 2.5fr;
+    gap: var(--level20);
+    padding: var(--level15) var(--level15) 0px var(--level15);
+    .titleAndInfo {
+      display: flex;
+      flex-direction: column;
+      gap: var(--level10);
+      h2 {
+        display: flex;
+        align-items: center;
+        font-size: var(--level11);
+        font-weight: 400;
+        img {
+          margin-inline-end: var(--level6);
+        }
+      }
+      p {
+        font-size: 42px;
+        font-weight: 400;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+    > img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 755px;
+      max-height: 335px;
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .serviceSteps {
+    background-color: var(--color-old-lace);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -10px;
+    position: relative;
+    padding: 2rem;
+    z-index: 5;
+    // gap: var(--level15);
+    border-radius: 8px;
+    .step {
+      width: 250px;
+      height: 273px;
+      padding: 3rem 1.6rem;
+      border-radius: 8px;
+      p {
+        font-size: var(--level12);
+        margin-bottom: 7rem;
+      }
+      h3 {
+        font-size: var(--level10);
+        font-weight: 400;
+        margin-bottom: var(--level9);
+      }
+      span {
+        font-size: var(--level8);
+      }
+    }
+    .activeTab {
+      background-color: var(--color-white);
+      position: relative;
+      .numberAndArrow {
+        display: flex;
+        justify-content: space-between;
+      }
+      svg {
+        // position: absolute;
+        // top: 20;
+        // inset-inline-end: 20;
+      }
+    }
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: -5px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/** @format */
+@import "./themes.scss";
+
+:root {
+  /* colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-chinese-black: #141414;
+  --color-old-lace: #f9f5ea;
+  --color-indian-yellow: #f0a64d;
+  --color-dar-spring-green: #10773c;
+  --color-royal-blue: #486be9;
+  /* levels  */
+  --level1: 0.2rem;
+  --level2: 0.4rem;
+  --level3: 0.6rem;
+  --level4: 0.8rem;
+  --level5: 1rem;
+  --level6: 1.2rem;
+  --level7: 1.4rem;
+  --level8: 1.6rem;
+  --level9: 1.8rem;
+  --level10: 2rem;
+  --level11: 2.2rem;
+  --level12: 2.4rem;
+  --level13: 2.6rem;
+  --level14: 2.5rem;
+  --level15: 3rem;
+  --level16: 3.2rem;
+  --level20: 4rem;
+
+  /* border radius*/
+  --border-radius-sm: 0.6rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 2rem;
+
+  /* heights */
+  --navbar-height: 6.3rem;
+
+  /* base font size  */
+  --font-size-base: 1.4rem;
+  --font-size-md: 1.6rem;
+}

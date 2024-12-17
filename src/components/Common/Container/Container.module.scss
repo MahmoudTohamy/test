@@ -1,0 +1,9 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--level5);
+
+  @include responsive-max(768) {
+    margin: 0 auto;
+  }
+}

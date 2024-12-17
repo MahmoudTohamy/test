@@ -1,0 +1,37 @@
+/** @format */
+
+.headerCont {
+  height: 78px;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--level10);
+  border-bottom: 1px solid #1414141a;
+  > svg {
+    color: var(--color-chinese-black);
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--level10);
+    p {
+      font-size: var(--level8);
+      display: flex;
+      align-items: center;
+      svg {
+        margin-inline-start: var(--level2);
+      }
+    }
+    button {
+      border: none;
+      outline: none;
+      background-color: var(--color-black);
+      padding: var(--level4) var(--level8);
+      color: var(--color-white);
+      border-radius: 50px;
+      font-size: var(--level8);
+      color: var(--color-old-lace);
+    }
+  }
+}

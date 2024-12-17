@@ -1,0 +1,22 @@
+/** @format */
+
+$light-background: #fff;
+$light-shadow-background: #e2bcfa;
+$light-text: #400c60;
+
+$dark-primary: #121212;
+$dark-shadow-background: #200630;
+$dark-text: #fff;
+
+$theme-colors: (
+  light: (
+    background: $light-background,
+    shadow-background: $light-shadow-background,
+    text: $light-text,
+  ),
+  dark: (
+    primary: $dark-primary,
+    shadow-background: $dark-shadow-background,
+    text: $dark-text,
+  ),
+);
