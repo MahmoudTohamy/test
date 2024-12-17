@@ -29,13 +29,13 @@ const saansTrial = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "nusuk",
+  title: "test",
   description: "",
 };
 
 type TProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: any;
 };
 
 const i18nNamespaces = ["common"];
