@@ -35,20 +35,16 @@ export const metadata: Metadata = {
 
 type TProps = {
   children: React.ReactNode;
-  params: any;
 };
 
 const i18nNamespaces = ["common"];
-export default async function RootLayout({
-  children,
-  params: { locale },
-}: TProps) {
+export default async function RootLayout({ children }: TProps) {
   const {
     i18n: { dir },
     resources,
-  } = await initTranslations(locale, i18nNamespaces);
+  } = await initTranslations("ar", i18nNamespaces);
   return (
-    <html lang={locale} dir={dir()}>
+    <html lang={"ar"} dir={dir()}>
       <head>
         <meta name='robots' content='noidex, nofollow' />
       </head>
@@ -56,7 +52,7 @@ export default async function RootLayout({
         <main>
           <TranslationsProvider
             namespaces={i18nNamespaces}
-            locale={locale}
+            locale={"ar"}
             resources={resources}>
             <NotificationManger>
               <>
