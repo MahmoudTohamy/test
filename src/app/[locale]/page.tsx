@@ -9,9 +9,9 @@ import Stats from "@/components/Home/Stats/Stats";
 import DiscoverSlider from "@/components/Home/DiscoverSlider/DiscoverSlider";
 
 type TProps = {
-  searchParams: {
+  searchParams: Promise<{
     activeId: string;
-  };
+  }>;
 };
 
 export default async function page({ searchParams }: TProps) {

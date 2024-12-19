@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 type TProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 const i18nNamespaces = ["common"];
