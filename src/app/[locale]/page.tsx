@@ -6,7 +6,6 @@ import PlatformInfo from "@/components/Home/PlatformInfo/PlatformInfo";
 import Services from "@/components/Home/Services/index";
 import style from "./page.module.scss";
 import Stats from "@/components/Home/Stats/Stats";
-import FAQ from "@/components/Home/FAQ/FAQ";
 import DiscoverSlider from "@/components/Home/DiscoverSlider/DiscoverSlider";
 
 type TProps = {
