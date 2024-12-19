@@ -1,9 +1,12 @@
+/** @format */
+
 .faq {
   background-color: var(--color-black);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-old-lace);
+  position: relative;
   padding: 13rem 0;
   flex-direction: column;
   gap: 3.7rem;
@@ -20,5 +23,9 @@
     border-radius: 2.2rem;
     text-align: center;
     font-weight: 580;
+  }
+  @include responsive-max(800) {
+    padding: 5rem 0;
+    z-index: 20;
   }
 }

@@ -18,7 +18,13 @@ function Header() {
       </div>
       <h1 className={styles.title}>
         Awaken
-        <Image src="/assets/makka.svg" alt="makka" width={47} height={49} />
+        <Image
+          className={styles.makkaImg}
+          src="/assets/makka.svg"
+          alt="makka"
+          width={47}
+          height={49}
+        />
         Your Path to Spiritual Growth.
       </h1>
       <div className={styles.mockup}>
@@ -29,11 +35,11 @@ function Header() {
           <Image
             src={"/assets/downloadAppShape.svg"}
             alt="downloadAppShape"
-            width={108}
+            width={102}
             className={styles.downloadAppShape}
             height={108}
           />
-          <p>Download the app</p>
+          <p className={styles.downloadAppText}>Download the app</p>
         </div>
       </Link>
     </div>

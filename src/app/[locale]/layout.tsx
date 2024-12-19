@@ -10,6 +10,13 @@ import Header from "@/components/Common/Header/index";
 import Footer from "@/components/Common/Footer/index";
 import localFont from "next/font/local";
 
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import FAQ from "@/components/Home/FAQ/FAQ";
+
 const saansTrial = localFont({
   src: [
     {
@@ -29,35 +36,35 @@ const saansTrial = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "test",
+  title: "nusuk",
   description: "",
 };
 
 type TProps = {
   children: React.ReactNode;
+  params: { locale: string };
 };
 
 const i18nNamespaces = ["common"];
-export default async function RootLayout({ children }: TProps) {
+export default async function RootLayout({ children, params }: TProps) {
+  const { locale } = await params;
   const {
     i18n: { dir },
     resources,
-  } = await initTranslations("ar", i18nNamespaces);
+  } = await initTranslations(locale, i18nNamespaces);
   return (
-    <html lang={"ar"} dir={dir()}>
-      <head>
-        <meta name='robots' content='noidex, nofollow' />
-      </head>
+    <html lang={locale} dir={dir()}>
       <body style={{ fontFamily: saansTrial.style.fontFamily }}>
         <main>
           <TranslationsProvider
             namespaces={i18nNamespaces}
-            locale={"ar"}
+            locale={locale}
             resources={resources}>
             <NotificationManger>
               <>
                 <Header />
                 <div className={style.container}>{children}</div>
+                <FAQ />
                 <Footer />
               </>
             </NotificationManger>

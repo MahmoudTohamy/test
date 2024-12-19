@@ -7,17 +7,25 @@ import Services from "@/components/Home/Services/index";
 import style from "./page.module.scss";
 import Stats from "@/components/Home/Stats/Stats";
 import FAQ from "@/components/Home/FAQ/FAQ";
+import DiscoverSlider from "@/components/Home/DiscoverSlider/DiscoverSlider";
 
-export default function page() {
+type TProps = {
+  searchParams: {
+    activeId: string;
+  };
+};
+
+export default async function page({ searchParams }: TProps) {
+  const { activeId } = await searchParams;
   return (
     <div className={style.home}>
       <Header />
       <div className={style.body}>
         <PlatformInfo />
-        <PlanYourTrip activeId={"3"} />
+        <PlanYourTrip activeId={activeId ? activeId : "1"} />
         <Services />
         <Stats />
-        <FAQ />
+        <DiscoverSlider />
       </div>
     </div>
   );

@@ -87,6 +87,10 @@
         gap: 5.5rem;
         display: flex;
         align-items: center;
+        @include responsive-max(768) {
+          justify-content: space-between;
+          gap: 2.5rem;
+        }
         .companyName {
           position: relative;
           font-size: 2.2rem;
@@ -96,8 +100,8 @@
         }
 
         .separator {
-          width: 0.6rem;
-          height: 0.6rem;
+          min-width: 0.6rem;
+          min-height: 0.6rem;
           border-radius: 50%;
           background-color: var(--color-dar-spring-green);
         }

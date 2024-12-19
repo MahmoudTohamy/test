@@ -3,17 +3,21 @@
 .headerCont {
   height: 78px;
   background-color: var(--color-white);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   padding: var(--level10);
   border-bottom: 1px solid #1414141a;
   > svg {
     color: var(--color-chinese-black);
   }
+  > img {
+    margin: auto;
+  }
   .actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: var(--level10);
     p {
       font-size: var(--level8);
@@ -32,6 +36,12 @@
       border-radius: 50px;
       font-size: var(--level8);
       color: var(--color-old-lace);
+    }
+    @include responsive-max(600) {
+      p,
+      button {
+        font-size: var(--level7);
+      }
     }
   }
 }
