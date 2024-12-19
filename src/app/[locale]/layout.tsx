@@ -54,6 +54,9 @@ export default async function RootLayout({ children, params }: TProps) {
   } = await initTranslations(locale, i18nNamespaces);
   return (
     <html lang={locale} dir={dir()}>
+      <head>
+        <meta name='robots' content='noidex, nofollow' />
+      </head>
       <body style={{ fontFamily: saansTrial.style.fontFamily }}>
         <main>
           <TranslationsProvider
