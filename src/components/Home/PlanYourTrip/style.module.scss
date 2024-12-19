@@ -84,5 +84,8 @@
       grid-template-columns: repeat(3, 1fr);
       margin-top: -5px;
     }
+    @include responsive-max(580) {
+      justify-content: center;
+    }
   }
 }
