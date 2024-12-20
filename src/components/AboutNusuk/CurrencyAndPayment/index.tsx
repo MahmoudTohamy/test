@@ -76,7 +76,7 @@ const CollapsItem = ({
     <div className={style.collapsItem}>
       <p className={style.number}>{number}</p>
       <p className={style.collapsTitle}>{title}</p>
-      <p className={style.msg}></p>
+      <p className={style.msg}>{isOpen ? msg : ""}</p>
       <div>
         <GoPlus size={26} />
       </div>
