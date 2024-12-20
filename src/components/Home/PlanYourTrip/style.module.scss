@@ -2,42 +2,7 @@
 
 .planningCont {
   margin: auto;
-  .infoCont {
-    display: grid;
-    grid-template-columns: 2fr 2.5fr;
-    gap: var(--level20);
-    padding: var(--level15) var(--level15) 0px var(--level15);
-    .titleAndInfo {
-      display: flex;
-      flex-direction: column;
-      gap: var(--level10);
-      h2 {
-        display: flex;
-        align-items: center;
-        font-size: var(--level11);
-        font-weight: 400;
-        img {
-          margin-inline-end: var(--level6);
-        }
-      }
-      p {
-        font-size: 42px;
-        font-weight: 400;
-      }
-      span {
-        font-size: 20px;
-      }
-    }
-    > img {
-      width: 100% !important;
-      height: 100% !important;
-      max-width: 755px;
-      max-height: 335px;
-    }
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr;
-    }
-  }
+
   .serviceSteps {
     background-color: var(--color-old-lace);
     display: flex;
@@ -87,5 +52,41 @@
     @include responsive-max(580) {
       justify-content: center;
     }
+  }
+}
+.infoCont {
+  display: grid;
+  grid-template-columns: 2fr 2.5fr;
+  gap: var(--level20);
+  padding: var(--level15) var(--level15) 0px var(--level15);
+  .titleAndInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--level10);
+    h2 {
+      display: flex;
+      align-items: center;
+      font-size: var(--level11);
+      font-weight: 400;
+      img {
+        margin-inline-end: var(--level6);
+      }
+    }
+    p {
+      font-size: 42px;
+      font-weight: 400;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+  > img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 755px;
+    max-height: 335px;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 }

@@ -88,16 +88,6 @@ a:visited {
   border-radius: 5px;
 }
 
-::-moz-selection {
-  background: var(--color-200);
-  background: var(--color-300);
-}
-
-::selection {
-  color: var(--color-200);
-  background: var(--color-300);
-}
-
 section {
   position: relative;
   overflow: hidden;

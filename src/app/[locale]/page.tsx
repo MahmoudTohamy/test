@@ -20,7 +20,11 @@ export default async function page({ searchParams }: TProps) {
     <div className={style.home}>
       <Header />
       <div className={style.body}>
-        <PlatformInfo />
+        <PlatformInfo
+          title='The holistic Journey Platform'
+          italic='The first-ever official planning, booking and experience'
+          msg='platform, to create your Umrah itinerary to Makkah, Madina, and beyond. With Nusuk, travelers from all over the world can easily organize their entire visit, from applying for an eVisa to booking hotels and flights.'
+        />
         <PlanYourTrip activeId={activeId ? activeId : "1"} />
         <Services />
         <Stats />

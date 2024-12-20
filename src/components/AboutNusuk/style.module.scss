@@ -1,0 +1,19 @@
+/** @format */
+
+.aboutNusuk {
+  margin-bottom: 15rem;
+  background: var(
+    --neutral-overlay,
+    linear-gradient(
+      360deg,
+      rgba(249, 245, 234, 0) 0%,
+      #f9f5ea 26.49%,
+      #f9f5ea 100%
+    )
+  );
+  .imgCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,94 @@
+/** @format */
+
+.aboutSaudiCont {
+  margin-top: 19.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 11.1rem;
+  .tabsAndImage {
+    display: flex;
+    align-items: center;
+    .tabs {
+      padding: var(--level8);
+      background-color: var(--color-old-lace);
+      border-radius: 8px;
+      height: 40.1rem;
+      width: 21.6rem;
+      margin-inline-start: -50px;
+      .tab {
+        padding: var(--level8);
+        border-radius: 8px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 18.4rem;
+        p {
+          font-size: var(--level10);
+        }
+        span {
+          font-size: var(--level9);
+        }
+      }
+      .activeTab {
+        background-color: var(--color-white);
+      }
+    }
+    @include responsive-max(1100) {
+      img {
+        width: 80%;
+        height: auto;
+      }
+      .tabs {
+        height: 30rem;
+        .tab {
+          height: 13.5rem;
+        }
+      }
+    }
+  }
+  .info {
+    display: flex;
+    gap: var(--level10);
+    flex-direction: column;
+    color: var(--color-black);
+    margin-top: 3rem;
+    .title {
+      display: flex;
+      gap: var(--level7);
+      align-items: center;
+      h3 {
+        font-weight: 400;
+        font-size: 18px;
+      }
+    }
+    h4 {
+      font-size: 4.2rem;
+      font-weight: 400;
+    }
+    p {
+      font-size: var(--level9);
+    }
+  }
+  @include responsive-max(800) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+    .tabsAndImage {
+      > img {
+        // width: 80%;
+        height: auto;
+        max-height: 32.8rem;
+      }
+      .tabs {
+        height: 40.1rem;
+        width: 16rem;
+
+        .tab {
+          height: 18.4rem;
+        }
+      }
+    }
+  }
+}

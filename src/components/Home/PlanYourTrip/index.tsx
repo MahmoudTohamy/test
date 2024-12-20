@@ -41,33 +41,14 @@ export default function PlanYourTrip({ activeId }: { activeId: string }) {
     <div className={style.planningCont}>
       <Container>
         <>
-          <div className={style.infoCont}>
-            <div className={style.titleAndInfo}>
-              <h2>
-                <Image
-                  alt="icon"
-                  src={"/assets/Group2147208538.png"}
-                  width={34}
-                  height={34}
-                />{" "}
-                Plan your trip
-              </h2>
-              <p>
-                Start planning <br />
-                <i>your journey</i>
-              </p>
-              <span>
-                Everything you need to know to start planning your journey to
-                Makkah and Madinah.
-              </span>
-            </div>
-            <Image
-              src={"/assets/49e0935904126d14a6fb150377b773ce.png"}
-              alt="hajj"
-              width={755}
-              height={322}
-            />
-          </div>
+          <CompHeader
+            title='Plan your trip'
+            imgSrc='/assets/49e0935904126d14a6fb150377b773ce.png'
+            subTitle='Start planning '
+            subTitleItalic='your journey'
+            msg='Everything you need to know to start planning your journey to Makkah and Madinah.'
+          />
+
           <div className={style.serviceSteps}>
             {steps.map((step) => (
               <Step key={step.number} {...step} activeId={activeId} />
@@ -96,8 +77,7 @@ const Step = ({
         className={clsx(
           style.step,
           Number(activeId) === Number(number) && style.activeTab
-        )}
-      >
+        )}>
         <div className={style.numberAndArrow}>
           <p>{number}</p>
           {Number(activeId) === Number(number) ? (
@@ -109,5 +89,41 @@ const Step = ({
         <span>{disc}</span>
       </div>
     </Link>
+  );
+};
+
+export const CompHeader = ({
+  title,
+  subTitle,
+  subTitleItalic,
+  msg,
+  imgSrc,
+}: {
+  title: string;
+  subTitle: string;
+  subTitleItalic: string;
+  msg: string;
+  imgSrc: string;
+}) => {
+  return (
+    <div className={style.infoCont}>
+      <div className={style.titleAndInfo}>
+        <h2>
+          <Image
+            alt='icon'
+            src={"/assets/Group2147208538.png"}
+            width={34}
+            height={34}
+          />{" "}
+          {title}
+        </h2>
+        <p>
+          {subTitle} <br />
+          <i>{subTitleItalic}</i>
+        </p>
+        <span>{msg}</span>
+      </div>
+      <Image src={imgSrc} alt='hajj' width={755} height={322} />
+    </div>
   );
 };
